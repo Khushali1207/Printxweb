@@ -1,16 +1,36 @@
-# React + Vite
+# PrintX Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, premium web platform for **PrintX** – offering on‑demand 24/7 printing at kiosks, host‑your‑own kiosk installations, and seamless user experience.
 
-Currently, two official plugins are available:
+## Tech Stack
+- **React** with **Vite** for fast development and hot‑module replacement.
+- **GSAP** for high‑performance animations across the entire site.
+- **Firebase** for authentication, hosting, and realtime data.
+- **Tailored design system** with dark‑mode, glassmorphism, vibrant gradients, and micro‑animations.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
+- **Find a Kiosk** – Locate nearby PrintX kiosks on an interactive map.
+- **Print Anywhere** – Upload documents, select options, and print instantly.
+- **Host a Kiosk** – Simple installation form for institutions, co‑working spaces, or public areas.
+- **Legal Pages** – Terms & Conditions, Privacy Policy, Refund Policy with distinct visual themes.
+- **Responsive Design** – Optimized for desktop, tablet, and mobile.
 
-## React Compiler
+## Getting Started
+```bash
+# Install dependencies
+npm install
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Run development server
+npm run dev
+```
+Open http://localhost:5173 to view the app.
 
-## Expanding the ESLint configuration
+## Deployment
+Deploy to **Firebase Hosting** or any static‑site host. The repository is set up with a CI pipeline for automated builds.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Contributing
+Feel free to open issues or submit pull requests. Follow the code style conventions and run `npm run lint` before committing.
+
+---
+© 2026 PrintX Technologies Pvt. Ltd. All rights reserved.
+Made with ❤️ in India.
