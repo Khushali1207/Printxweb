@@ -1,0 +1,610 @@
+/* ── ABOUT PAGE STYLES ── */
+.about-page {
+  font-family: 'Space Grotesk', sans-serif;
+  background: #FCF7F8;
+  color: #371E30;
+  overflow-x: hidden;
+}
+
+/* ── SECTION 1: HERO ── */
+.about-page .ab-hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 40px;
+  text-align: center;
+  background: #FCF7F8;
+  position: relative;
+  overflow: hidden;
+}
+.about-page .ab-hero-bg-text {
+  position: absolute;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 220px;
+  font-weight: 700;
+  color: rgba(180, 134, 159, 0.06);
+  letter-spacing: -10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+.about-page .ab-hero-line {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(28px, 5vw, 56px);
+  font-weight: 700;
+  color: #371E30;
+  line-height: 1.25;
+  opacity: 1;
+  max-width: 800px;
+}
+.about-page .ab-hero-line.accent {
+  color: #B4869F;
+}
+.about-page .ab-hero-line.big {
+  font-size: clamp(36px, 7vw, 80px);
+  margin: 12px 0;
+}
+.about-page .ab-hero-line.sub {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 400;
+  color: #5A3B57;
+  margin-top: 24px;
+  line-height: 1.7;
+}
+
+/* ── SECTION 2: VISION + PHONE MOCKUP ── */
+.about-page .ab-vision {
+  background: #371E30;
+  padding: 100px 40px 0 40px; /* modified padding to fit phone */
+  position: relative;
+  overflow: hidden;
+}
+.about-page .ab-vision-split {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  flex-wrap: wrap;
+}
+.about-page .ab-vision-content {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+}
+.about-page .ab-vision-quote-mark {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 200px;
+  color: rgba(180, 134, 159, 0.15);
+  position: absolute;
+  top: -60px;
+  left: -20px;
+  line-height: 1;
+  pointer-events: none;
+}
+.about-page .ab-vision-text {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(22px, 4vw, 44px);
+  font-weight: 600;
+  color: #FCF7F8;
+  line-height: 1.4;
+  position: relative;
+  z-index: 2;
+}
+.about-page .ab-vision-text em {
+  color: #FFE347;
+  font-style: normal;
+}
+
+.about-page .ab-vision-phone {
+  display: flex;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+/* Phone Mockup */
+.about-page .ab-phone-frame {
+  width: 320px;
+  height: 650px;
+  background: #000;
+  border-radius: 48px;
+  padding: 12px;
+  box-shadow: 
+    0 40px 80px rgba(0, 0, 0, 0.4),
+    inset 0 0 0 2px #444,
+    inset 0 0 0 6px #111;
+  position: relative;
+  transform: rotateY(-10deg) rotateX(5deg);
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+.about-page .ab-phone-frame:hover {
+  transform: rotateY(0deg) rotateX(0deg);
+}
+.about-page .ab-phone-screen {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 36px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.about-page .ab-phone-notch {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 30px;
+  background: #000;
+  border-radius: 20px;
+  z-index: 10;
+}
+.about-page .ab-phone-content {
+  padding: 60px 24px 32px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.about-page .ab-phone-content h3 {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 28px;
+  color: #371E30;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+.about-page .ab-phone-content p {
+  font-size: 14px;
+  color: #5A3B57;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.about-page .ab-phone-btns {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+}
+.about-page .ab-phone-btn {
+  padding: 12px 20px;
+  border-radius: 24px;
+  border: none;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+.about-page .ab-phone-btn.primary {
+  background: #5A3B57;
+  color: #fff;
+  flex: 1;
+}
+.about-page .ab-phone-btn.icon {
+  background: #B4869F;
+  color: #fff;
+  width: 44px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+/* Marquee */
+.about-page .ab-marquee-wrap {
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid rgba(180, 134, 159, 0.2);
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.about-page .ab-marquee-track {
+  display: flex;
+  gap: 0;
+  animation: abMarquee 18s linear infinite;
+  width: max-content;
+}
+.about-page .ab-marquee-item {
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(180, 134, 159, 0.7);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 0 32px;
+}
+.about-page .ab-marquee-dot {
+  color: #FFE347;
+  margin: 0 8px;
+}
+@keyframes abMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── SECTION 3: MODIFIED STATIC INFO SECTION ── */
+.about-page .ab-static-info {
+  background: #FEEDA0;
+  padding: 120px 40px;
+}
+.about-page .ab-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.about-page .ab-info-card {
+  background: #fffdf8;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(55, 30, 48, 0.05);
+}
+.about-page .ab-info-num {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #B4869F;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+.about-page .ab-info-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #371E30;
+  margin-bottom: 16px;
+}
+.about-page .ab-info-desc {
+  font-size: 15px;
+  color: #5A3B57;
+  line-height: 1.7;
+}
+
+/* ── SECTION 4: MISSION WORDS ── */
+.about-page .ab-mission {
+  padding: 120px 40px;
+  background: #FCF7F8;
+  text-align: center;
+}
+.about-page .ab-mission-label {
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #B4869F;
+  margin-bottom: 32px;
+  font-weight: 600;
+}
+.about-page .ab-mission-words {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.about-page .ab-mission-word {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 700;
+  color: #371E30;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.about-page .ab-mission-word.vis {
+  opacity: 1;
+  transform: translateY(0);
+}
+.about-page .ab-mission-word.rose {
+  color: #B4869F;
+}
+.about-page .ab-mission-word.plum {
+  color: #5A3B57;
+}
+
+/* ── SECTION 5: DRAG PILLARS ── */
+.about-page .ab-pillars {
+  padding: 100px 0;
+  background: #F5EEF0;
+  overflow: hidden;
+}
+.about-page .ab-pillars-label {
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  color: #B4869F;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+.about-page .ab-pillars-track-wrap {
+  overflow: hidden;
+  cursor: grab;
+  position: relative;
+}
+.about-page .ab-pillars-track-wrap:active {
+  cursor: grabbing;
+}
+.about-page .ab-pillars-track {
+  display: flex;
+  gap: 20px;
+  padding: 0 60px;
+  transition: transform 0.1s ease;
+  user-select: none;
+}
+.about-page .ab-pillar {
+  min-width: clamp(280px, 40vw, 480px);
+  height: 360px;
+  border-radius: 20px;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+.about-page .ab-pillar-1 { background: #371E30; }
+.about-page .ab-pillar-2 { background: #B4869F; }
+.about-page .ab-pillar-3 { background: #5A3B57; }
+.about-page .ab-pillar-num {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  opacity: 0.5;
+}
+.about-page .ab-pillar-1 .ab-pillar-num,
+.about-page .ab-pillar-2 .ab-pillar-num,
+.about-page .ab-pillar-3 .ab-pillar-num {
+  color: #FCF7F8;
+}
+.about-page .ab-pillar-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 700;
+  color: #FCF7F8;
+  margin-bottom: 12px;
+}
+.about-page .ab-pillar-desc {
+  font-size: 15px;
+  color: rgba(252, 247, 248, 0.75);
+  line-height: 1.7;
+  max-width: 340px;
+}
+.about-page .ab-drag-hint {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 13px;
+  color: #B4869F;
+  opacity: 0.7;
+}
+
+/* ── SECTION 6: FOUNDER LETTER ── */
+.about-page .ab-letter-section {
+  background: #FCF7F8;
+  padding: 120px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-page .ab-letter-card {
+  max-width: 620px;
+  width: 100%;
+  background: #FFFDF8;
+  border-radius: 4px;
+  padding: 56px 56px 48px;
+  box-shadow:
+    0 2px 8px rgba(55, 30, 48, 0.08),
+    0 20px 60px rgba(55, 30, 48, 0.1),
+    inset 0 0 0 1px rgba(180, 134, 159, 0.15);
+  transform: rotate(-1.5deg);
+  position: relative;
+  background-image:
+    repeating-linear-gradient(
+      transparent,
+      transparent 27px,
+      rgba(180, 134, 159, 0.12) 27px,
+      rgba(180, 134, 159, 0.12) 28px
+    );
+  transition: transform 0.4s ease;
+}
+.about-page .ab-letter-card:hover {
+  transform: rotate(0deg) scale(1.01);
+}
+.about-page .ab-letter-seal {
+  position: absolute;
+  top: -20px;
+  right: 40px;
+  width: 56px;
+  height: 56px;
+  background: #371E30;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #FFE347;
+  box-shadow: 0 4px 16px rgba(55, 30, 48, 0.3);
+  letter-spacing: 1px;
+}
+.about-page .ab-letter-date {
+  font-size: 12px;
+  color: #B4869F;
+  margin-bottom: 28px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+.about-page .ab-letter-greeting {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #371E30;
+  margin-bottom: 20px;
+}
+.about-page .ab-letter-body {
+  font-size: 15px;
+  color: #5A3B57;
+  line-height: 2;
+  margin-bottom: 32px;
+}
+.about-page .ab-letter-body p {
+  margin-bottom: 16px;
+}
+.about-page .ab-letter-sign-label {
+  font-size: 12px;
+  color: #B4869F;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.about-page .ab-letter-signature {
+  font-family: 'Dancing Script', cursive;
+  font-size: 36px;
+  color: #371E30;
+}
+.about-page .ab-letter-from {
+  font-size: 12px;
+  color: #B4869F;
+  margin-top: 4px;
+}
+.about-page .ab-letter-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(225deg, #F5EEF0 50%, transparent 50%);
+  border-radius: 0 0 4px 0;
+}
+
+/* ── SECTION 7: STATS ── */
+.about-page .ab-stats {
+  background: #371E30;
+  padding: 80px 40px;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+.about-page .ab-stat {
+  text-align: center;
+}
+.about-page .ab-stat-num {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 700;
+  color: #FCF7F8;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.about-page .ab-stat-num span {
+  color: #FFE347;
+}
+.about-page .ab-stat-label {
+  font-size: 14px;
+  color: rgba(252, 247, 248, 0.6);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* ── SECTION 8: ECOSYSTEM ── */
+.about-page .ab-ecosystem {
+  padding: 120px 40px;
+  background: #FCF7F8;
+  text-align: center;
+}
+.about-page .ab-eco-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(24px, 4vw, 42px);
+  font-weight: 700;
+  color: #371E30;
+  margin-bottom: 16px;
+}
+.about-page .ab-eco-sub {
+  font-size: 16px;
+  color: #5A3B57;
+  margin-bottom: 60px;
+  opacity: 0.8;
+}
+.about-page .ab-eco-network {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+.about-page .ab-eco-network svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+/* ── CTA ── */
+.about-page .ab-cta-section {
+  background: #B4869F;
+  padding: 80px 40px;
+  text-align: center;
+}
+.about-page .ab-cta-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(28px, 5vw, 52px);
+  font-weight: 700;
+  color: #FCF7F8;
+  margin-bottom: 12px;
+}
+.about-page .ab-cta-sub {
+  font-size: 17px;
+  color: rgba(252, 247, 248, 0.8);
+  margin-bottom: 40px;
+}
+.about-page .ab-cta-btns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.about-page .ab-btn {
+  padding: 14px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  font-family: 'Space Grotesk', sans-serif;
+}
+.about-page .ab-btn-dark {
+  background: #371E30;
+  color: #FCF7F8;
+}
+.about-page .ab-btn-dark:hover {
+  background: #5A3B57;
+  transform: translateY(-3px);
+}
+.about-page .ab-btn-outline {
+  background: transparent;
+  color: #FCF7F8;
+  border: 2px solid rgba(252, 247, 248, 0.5);
+}
+.about-page .ab-btn-outline:hover {
+  background: rgba(252, 247, 248, 0.1);
+  transform: translateY(-3px);
+}
+
+@media(max-width:768px){
+  .about-page .ab-vision-split { flex-direction: column; }
+  .about-page .ab-phone-frame { transform: rotateY(0deg) rotateX(0deg); }
+  .about-page .ab-stats { gap: 40px; }
+  .about-page .ab-letter-card { padding: 36px 28px; transform: rotate(-0.5deg); }
+  .about-page .ab-pillars-track { padding: 0 24px; }
+}

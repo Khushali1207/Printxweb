@@ -1,14 +1,19 @@
-import React from 'react'
-import PrintXLandingPage from './PrintXLandingPage'
-import { MouseFollower } from './MouseFollower'
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import MouseFollower from './MouseFollower';
+import AppRoutes from './routes/AppRoutes';
+import HelpBubble from './HelpBubble';
+import GlobalLoginButton from './GlobalLoginButton';
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <MouseFollower />
-      <PrintXLandingPage />
-    </>
-  )
+      <AppRoutes />
+      <HelpBubble />
+      <GlobalLoginButton />
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

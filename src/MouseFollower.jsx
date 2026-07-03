@@ -39,10 +39,10 @@ export default function MouseFollower() {
           left: 0,
           width: '14px',
           height: '14px',
-          backgroundColor: '#371E30', /* Deep Plum */
+          backgroundColor: '#C38D9E', /* Light Dusty Rose/Purple */
           borderRadius: '50%',
           pointerEvents: 'none',
-          zIndex: 9999,
+          zIndex: 99999,
           opacity: isVisible ? 1 : 0,
           transform: `translate3d(${position.x - 7}px, ${position.y - 7}px, 0)`,
           willChange: 'transform'
